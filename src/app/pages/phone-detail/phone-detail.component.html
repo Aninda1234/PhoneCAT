@@ -1,0 +1,68 @@
+
+<div class="container" *ngIf="phone">
+    <h1 class="title">{{ phone.name }}</h1>
+    <div class="detail-container">
+      <img [src]="phone.imageUrl" alt="{{ phone.name }}" class="detail-image" />
+      <div class="detail-content">
+        <p><strong>Price:</strong> ${{ phone.price }}</p>
+        <p><strong>Description:</strong> {{ phone.description }}</p>
+  
+        <h2>Specifications</h2>
+        <ul>
+          <li><strong>OS:</strong> {{ phone.android.os }}</li>
+          <li><strong>UI:</strong> {{ phone.android.ui }}</li>
+          <li><strong>Battery:</strong> {{ phone.battery.type }}</li>
+          <li><strong>Primary Camera:</strong> {{ phone.camera.primary }}</li>
+          <li><strong>Screen Size:</strong> {{ phone.display.screenSize }}</li>
+          <li><strong>Weight:</strong> {{ phone.sizeAndWeight.weight }}</li>
+          <li><strong>Dimensions:</strong> {{ phone.sizeAndWeight.dimensions.join(', ') }}</li>
+        </ul>
+  
+        <h2>Additional Features</h2>
+        <p>{{ phone.additionalFeatures }}</p>
+  
+        <h2>Connectivity</h2>
+        <ul>
+          <li><strong>Bluetooth:</strong> {{ phone.connectivity.bluetooth }}</li>
+          <li><strong>GPS:</strong> {{ phone.connectivity.gps ? 'Yes' : 'No' }}</li>
+          <li><strong>Wi-Fi:</strong> {{ phone.connectivity.wifi }}</li>
+        </ul>
+  
+        <a routerLink="/" class="back-button">Back to Home</a>
+      </div>
+    </div>
+  </div>
+  
+
+
+<!-- <div *ngIf="phone">
+    <h1>{{ phone.name }}</h1>
+    <img [src]="phone.imageUrl" alt="{{ phone.name }}" />
+    <p><strong>Price:</strong> ${{ phone.price }}</p>
+    <p><strong>Description:</strong> {{ phone.description }}</p>
+  
+    <h2>Specifications</h2>
+    <ul>
+      <li><strong>OS:</strong> {{ phone.android.os }}</li>
+      <li><strong>UI:</strong> {{ phone.android.ui }}</li>
+      <li><strong>Battery:</strong> {{ phone.battery.type }}</li>
+      <li><strong>Primary Camera:</strong> {{ phone.camera.primary }}</li>
+      <li><strong>Screen Size:</strong> {{ phone.display.screenSize }}</li>
+      <li><strong>Weight:</strong> {{ phone.sizeAndWeight.weight }}</li>
+      <li><strong>Dimensions:</strong> {{ phone.sizeAndWeight.dimensions.join(', ') }}</li>
+    </ul>
+  
+    <h2>Additional Features</h2>
+    <p>{{ phone.additionalFeatures }}</p>
+  
+    <h2>Connectivity</h2>
+    <ul>
+      <li><strong>Bluetooth:</strong> {{ phone.connectivity.bluetooth }}</li>
+      <li><strong>GPS:</strong> {{ phone.connectivity.gps ? 'Yes' : 'No' }}</li>
+      <li><strong>Wi-Fi:</strong> {{ phone.connectivity.wifi }}</li>
+    </ul>
+  
+    <a routerLink="/" >Back to Home</a>
+  </div> -->
+
+  

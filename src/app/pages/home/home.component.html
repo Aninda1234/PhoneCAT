@@ -1,0 +1,40 @@
+<div class="container">
+    <h1 class="title">Phone Catalog</h1>
+    <div class="grid">
+      <div *ngFor="let phone of phones" class="card">
+        <img [src]="phone.imageUrl" alt="{{ phone.name }}" class="phone-image" />
+        <div class="card-content">
+          <h2 class="phone-name">{{ phone.name }}</h2>
+          <p class="phone-price">Price: ${{ phone.price }}</p>
+          <p class="phone-snippet">{{ phone.snippet }}</p>
+          <a [routerLink]="['/phone', phone.id]" class="details-button">View Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<!-- without CSS styling -->
+<!-- <div>
+    <h1>Available Phones</h1>
+    <div *ngFor="let phone of phones">
+      <img [src]="phone.imageUrl" alt="{{ phone.name }}" />
+      <h2>{{ phone.name }}</h2>
+      <p>Price: ${{ phone.price }}</p>
+      <p>{{ phone.snippet }}</p>
+      <a [routerLink]="['/phone', phone.id]" >View Details</a>
+    </div>
+</div> -->
+
+
+
+<!-- <div class="phone-list">
+    <h1>Available Phones</h1>
+    <div *ngFor="let phone of phones" class="phone-card">
+      <img [src]="phone.imageUrl" alt="{{ phone.name }}" />
+      <h2>{{ phone.name }}</h2>
+      <p>{{ phone.brand }} - ${{ phone.price }}</p>
+      <a [routerLink]="['/phone', phone.id]">View Details</a>
+    </div>
+  </div>
+
+   -->
